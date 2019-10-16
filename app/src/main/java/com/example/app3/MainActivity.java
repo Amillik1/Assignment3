@@ -11,7 +11,9 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     DvdView dvdView;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             SurfaceHolder ourHolder;
             Canvas canvas;
             Paint paint;
+            RelativeLayout layout;
             float dx = 10;
             float dy = 5;
             float maxx = 500;
@@ -47,10 +50,13 @@ public class MainActivity extends AppCompatActivity {
                 super(context);
                 ourHolder = getHolder();
                 paint = new Paint();
+                layout = new RelativeLayout(context);
                 dvd = new ImageView(context);
                 dvd.setImageResource(R.drawable.dvd);
                 dvd.setVisibility(VISIBLE);
                 dvd.setScaleType(ImageView.ScaleType.FIT_XY);
+                dvd.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT));
+                layout.addView(dvd);
             }
             //REFERENCE: https://github.com/profmadden/csterdroids/blob/master/app/src/main/java/edu/binghamton/cs/csterdroids/MainActivity.java
             public void update(){
