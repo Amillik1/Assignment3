@@ -17,7 +17,7 @@ public class customView extends View {
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
         Paint paint = new Paint();
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.BLACK);
         Rect rect = new Rect();
         rect.left = 0;
         rect.right = getWidth();
