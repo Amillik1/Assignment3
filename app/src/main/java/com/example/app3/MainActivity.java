@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         class DvdView extends SurfaceView implements Runnable{
             Thread dvdThread = null;
-            ImageView dvd = findViewById(R.id.image);
+            ImageView dvd;
             SurfaceHolder ourHolder;
             Canvas canvas;
             Paint paint;
@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 super(context);
                 ourHolder = getHolder();
                 paint = new Paint();
+                dvd = new ImageView(context);
+                dvd.setImageResource(R.drawable.dvd);
+                dvd.setVisibility(VISIBLE);
+                dvd.setScaleType(ImageView.ScaleType.FIT_XY);
             }
             //REFERENCE: https://github.com/profmadden/csterdroids/blob/master/app/src/main/java/edu/binghamton/cs/csterdroids/MainActivity.java
             public void update(){
@@ -67,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                     canvas.drawColor(Color.BLUE);
 
                     //DRAW IN HERE
+                    currx = 100;
+                    curry = 100;
                     dvd.setX(currx);
                     dvd.setY(curry);
                     dvd.draw(canvas);
@@ -81,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     update();
                     draw();
                     try {
-                        Thread.sleep(50);
+                        dvdThread.sleep(100);
                     }catch (InterruptedException e) {
                     }
                 }
