@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.animation.Animation;
@@ -17,6 +18,8 @@ import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     DvdView dvdView;
@@ -41,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
             Paint paint;
             Bitmap dvdPicture;
             RelativeLayout layout;
-            float dx = 100;
-            float dy = 50;
-            float maxx = 1000;
-            float maxy = 1000;
-            float minx = 100;
-            float miny = 100;
+            float dx = (float)Math.random() * 50;
+            float dy = (float)Math.random() * 50;
+            float maxx = 800;
+            float maxy = 1200;
+            float minx = 0;
+            float miny = 0;
             float currx = minx+dx;
             float curry = miny+dy;
             boolean running = true;
@@ -92,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     //dvd.setY(curry);
                     canvas.drawBitmap(dvdPicture, currx, curry, paint);
                     //dvd.draw(canvas);
-                    canvas.drawCircle(currx, curry, 50, paint);
+                    //canvas.drawCircle(currx, curry, 50, paint);
 
                     ourHolder.unlockCanvasAndPost(canvas);
                 }
@@ -104,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     update();
                     draw();
                     try {
-                        dvdThread.sleep(100);
+                        dvdThread.sleep(20);
                     }catch (InterruptedException e) {
                     }
                 }
@@ -113,6 +116,21 @@ public class MainActivity extends AppCompatActivity {
 
                 dvdThread = new Thread(this);
                 dvdThread.start();
+            }
+
+            @Override
+            public boolean onTouchEvent(MotionEvent motionEvent){
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
+                    dx = (float)Math.random() * 50;
+                    dy = (float)Math.random() * 50;
+                    if (Math.random() >= .5){
+                        dx = -dx;
+                    }
+                    if (Math.random() >= .5){
+                        dy = -dy;
+                    }
+                }
+                return true;
             }
         }
     @Override
