@@ -1,0 +1,143 @@
+commit 41acdf7adfe6fa8a21d67b3e5dd8297af565bd78
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Thu Oct 17 17:22:24 2019 -0400
+
+    readme
+
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit e5c48293695d1c791a339f2a0c4149ac54d26b90
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Thu Oct 17 17:18:34 2019 -0400
+
+    woohoo it works
+
+ .../main/java/com/example/app3/MainActivity.java   |  34 ++++++++++++++++-----
+ app/src/main/res/drawable-v24/dvd.png              | Bin 20065 -> 4302 bytes
+ 2 files changed, 26 insertions(+), 8 deletions(-)
+
+commit 9eaca833e2bfd8ddf41a6c5a23fe2f9f2032e542
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Wed Oct 16 10:44:29 2019 -0400
+
+    {not nice words} this
+
+ .../main/java/com/example/app3/MainActivity.java   | 41 ++++++++++++++--------
+ app/src/main/java/com/example/app3/customView.java |  2 +-
+ app/src/main/res/layout/activity_main.xml          |  7 +++-
+ 3 files changed, 33 insertions(+), 17 deletions(-)
+
+commit 0c4fda2d86f129b7c6d24a93e6856cbc70c93a70
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Wed Oct 16 10:13:51 2019 -0400
+
+    uhh
+
+ app/src/main/java/com/example/app3/MainActivity.java | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 5204029ce75f756468edeb21bd84b1fdb41e7bae
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Wed Oct 16 09:58:08 2019 -0400
+
+    haha broken sanity
+
+ app/src/main/java/com/example/app3/MainActivity.java | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+commit 3fe416486e7e5ea98f9e5bf0f5c1fbb6f43993c2
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Mon Oct 14 10:44:22 2019 -0400
+
+    Almost there? Fatal crash on imageview
+
+ .../main/java/com/example/app3/MainActivity.java   | 67 +++++++++++++++++-----
+ app/src/main/res/layout/activity_main.xml          | 22 ++-----
+ 2 files changed, 59 insertions(+), 30 deletions(-)
+
+commit d889c58f45cc6476f2d3fa7a85db07e643182cd2
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Fri Oct 11 10:41:49 2019 -0400
+
+    Still working
+
+ .../main/java/com/example/app3/MainActivity.java   | 55 +++++++++++++---------
+ 1 file changed, 33 insertions(+), 22 deletions(-)
+
+commit 84ec1da7690460813da0e6e33dd7ea04c5f39ca1
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Mon Oct 7 10:44:08 2019 -0400
+
+    forgot my dvd image
+
+ app/src/main/res/drawable-v24/dvd.png | Bin 0 -> 20065 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6032419839cc94a6b2803d34e2e814154526ddee
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Mon Oct 7 10:43:28 2019 -0400
+
+    working through animations
+
+ .../main/java/com/example/app3/MainActivity.java   | 37 ++++++++++++++++++++++
+ app/src/main/res/layout/activity_main.xml          | 17 ++++++++--
+ 2 files changed, 51 insertions(+), 3 deletions(-)
+
+commit 199e34af5b58b1667d568ef9383120a719c0a220
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Fri Sep 27 10:24:42 2019 -0400
+
+    added a new view
+
+ .idea/vcs.xml                                      |  6 +++++
+ app/src/main/java/com/example/app3/customView.java | 29 ++++++++++++++++++++++
+ app/src/main/res/layout/activity_main.xml          | 12 +++------
+ 3 files changed, 39 insertions(+), 8 deletions(-)
+
+commit 1acf48882882ab2cc949fa0cb959c056d76ec108
+Author: AMillik1 <amillik1@binghamton.edu>
+Date:   Fri Sep 27 10:09:30 2019 -0400
+
+    hope this works
+
+ .gitignore                                         |  14 ++
+ .idea/.name                                        |   1 +
+ .idea/codeStyles/Project.xml                       | 116 ++++++++++++++
+ .idea/gradle.xml                                   |  16 ++
+ .idea/misc.xml                                     |   9 ++
+ .idea/runConfigurations.xml                        |  12 ++
+ README.md                                          |   1 +
+ app/.gitignore                                     |   1 +
+ app/build.gradle                                   |  29 ++++
+ app/proguard-rules.pro                             |  21 +++
+ .../com/example/app3/ExampleInstrumentedTest.java  |  27 ++++
+ app/src/main/AndroidManifest.xml                   |  21 +++
+ .../main/java/com/example/app3/MainActivity.java   |  14 ++
+ .../res/drawable-v24/ic_launcher_foreground.xml    |  34 ++++
+ .../main/res/drawable/ic_launcher_background.xml   | 170 ++++++++++++++++++++
+ app/src/main/res/layout/activity_main.xml          |  18 +++
+ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   5 +
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   5 +
+ app/src/main/res/mipmap-hdpi/ic_launcher.png       | Bin 0 -> 2963 bytes
+ app/src/main/res/mipmap-hdpi/ic_launcher_round.png | Bin 0 -> 4905 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.png       | Bin 0 -> 2060 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher_round.png | Bin 0 -> 2783 bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.png      | Bin 0 -> 4490 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    | Bin 0 -> 6895 bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.png     | Bin 0 -> 6387 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   | Bin 0 -> 10413 bytes
+ app/src/main/res/mipmap-xxxhdpi/ic_launcher.png    | Bin 0 -> 9128 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  | Bin 0 -> 15132 bytes
+ app/src/main/res/values/colors.xml                 |   6 +
+ app/src/main/res/values/strings.xml                |   3 +
+ app/src/main/res/values/styles.xml                 |  11 ++
+ .../java/com/example/app3/ExampleUnitTest.java     |  17 ++
+ build.gradle                                       |  27 ++++
+ gradle.properties                                  |  20 +++
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54329 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ settings.gradle                                    |   2 +
+ 39 files changed, 862 insertions(+)
